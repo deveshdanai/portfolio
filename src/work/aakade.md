@@ -1,10 +1,10 @@
 ---
 title: Ankade
-titleDescription: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+titleDescription: Craft based design and development of textiles and apparels. 
 tags: ["project", "featured"]
 image: https://res.cloudinary.com/dyag5tn5v/image/upload/c_scale,w_1558/v1706421904/new%20portfolio/aankade/photo1.webp
 imageAlt: This is a test
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
+
 ---
 
 
