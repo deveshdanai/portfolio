@@ -1,0 +1,22 @@
+---
+title: DEVESH PORTFOLIO
+layout: 'base.njk'
+---
+
+      
+<div class="scroller">      
+     {%- for post in collections.featured -%}
+     {% include 'card-snippet.njk' %}
+         {%- endfor -%}
+    </div>   
+    
+      <script >
+        $(document).ready(function () {
+      $("html, body, *").mousewheel(function (e, delta) {
+        this.scrollLeft -= delta;
+        e.preventDefault();
+      });
+    });
+    
+    </script>
+   
