@@ -13,11 +13,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "eleventy-google-fonts": "^0.1.0"
-<<<<<<< HEAD
-=======
   },
   "dependencies": {
     "decap-cms": "^3.6.4"
->>>>>>> d94b9268 (Initial commit)
   }
 }
