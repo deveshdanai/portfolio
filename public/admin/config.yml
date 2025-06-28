@@ -1,12 +1,8 @@
 backend:
   name: git-gateway
-<<<<<<< HEAD
-  branch: main 
-=======
   branch: master 
->>>>>>> d94b9268 (Initial commit)
-media_folder: "public/assets/"
-public_folder: "/assets/"
+media_folder: "src/assets"
+public_folder: "/assets"
 collections:
   - name: "blog" 
     label: "Blog" 
@@ -20,8 +16,3 @@ collections:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Caption", name: "imageAlt", widget: "string"}
       - {label: "body", name: "body", widget: "markdown"}
-<<<<<<< HEAD
-      - {label: "Tags", name: "tags", widget: "list", default: "all" }
-=======
-      
->>>>>>> d94b9268 (Initial commit)
