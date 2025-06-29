@@ -9,6 +9,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin/uploads");
   eleventyConfig.addPassthroughCopy("src/google-fonts.css");
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/main.js");
 
   return {
     dir: {

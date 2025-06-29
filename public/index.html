@@ -9,11 +9,10 @@
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-   
+    <script type="module" src="/main.js"></script>
     
   </head>
-  <body>
-
+  <body data-barba="wrapper">
     
 <div class="title">
     <a href="/">DEVESH DANAI</a>
@@ -27,11 +26,13 @@
   </svg></a>
   <!-- <a href="/work/" class="samebtn"><span>WORK</span></a> -->
   <a href="/info/"class="samebtn">INFO</a>
-  <!-- <a href="/journal/"class="samebtn">JOURNAL</a> -->
+  <a href="/journal/"class="samebtn">JOURNAL</a>
   
   </div>
   </div>
 
+    <main data-barba="container" data-barba-namespace="">
+    
     
     
       
@@ -44,12 +45,12 @@
     </div>
   </div>
 </a>
-<a href="/work/mens-wear/">
+<a href="/work/Kanji/">
   <div class="card">
-    <img src="/assets/400755857_18316998205128099_281953829283039447_n.jpg" alt="" />
+    <img src="https://res.cloudinary.com/dyag5tn5v/image/upload/f_auto,q_auto/v1/new%20jc%20website%20assets/Screenshot_2024-01-20_at_2.53.43_PM" alt="" />
     <div class="card-info">
-      <h1>Festive Edit </h1>
-      <p>Women&#39;s wear festive edit with handwoven silk and khat embroidery. </p>
+      <h1>Kanji</h1>
+      <p>Ajrakh Expolration</p>
     </div>
   </div>
 </a>
@@ -66,7 +67,7 @@
     </script>
    
 
-
+  </main>
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -78,5 +79,37 @@
         });
       }
     </script>
+  <!-- <script type="module">
+    import barba from 'https://cdn.jsdelivr.net/npm/@barba/core/+esm';
+  
+    barba.init({
+      transitions: [
+        {
+          name: 'fade',
+          async leave({ current }) {
+            current.container.classList.add('fade-leave');
+            await new Promise(resolve => {
+              requestAnimationFrame(() => {
+                current.container.classList.add('fade-leave-active');
+                setTimeout(resolve, 300); // Match transition time exactly
+              });
+            });
+          },
+          enter({ next }) {
+            next.container.classList.add('fade-enter');
+            requestAnimationFrame(() => {
+              next.container.classList.add('fade-enter-active');
+            });
+          },
+          afterEnter({ next }) {
+            next.container.classList.remove('fade-enter', 'fade-enter-active');
+          },
+          afterLeave({ current }) {
+            current.container.classList.remove('fade-leave', 'fade-leave-active');
+          }
+        }
+      ]
+    });
+  </script> -->
   </body>
 </html>

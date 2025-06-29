@@ -1,6 +1,29 @@
 body {
   margin: 0;
 }
+/* Initial state for new content */
+[data-barba="container"] {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
 h1,
 p {
@@ -28,7 +51,7 @@ p {
   .bar {
     width: max-content;
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
     grid-template-rows: 1fr;
     grid-gap: 7px;
 
@@ -121,7 +144,8 @@ p {
   .card {
     height: 60vh;
     width: 60vw;
-    /*   border:1px red solid; */
+      border:1px red solid;
+      padding: 0;
   }
 
   .card img {
@@ -157,6 +181,7 @@ p {
     transition: all 0.3s ease;
     opacity: 0;
     border-radius: 0 0 24px 24px;
+    padding: 0;
   }
 
   .card:hover>.card-info {
@@ -190,28 +215,38 @@ p {
   a {
     text-decoration: none;
   }
+  .project-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    /* border:1px red solid; */
+  }
 
   .maincontainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 150px 0;
+            flex-direction: column;
+            align-items: center;
+            padding: 150px 0;
+            width:80vw;
   }
+
 
   main {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    /* width: 99.8vw; */
 
-    /*   border:1px red solid; */
+      /* border:1px red solid; */
   }
 
   main img {
     width: 80vw;
     height: auto;
     aspect-ratio: auto;
-    padding-top:20px;
+    /* padding-top:20px; */
   }
 
   .fourgrid {
@@ -312,7 +347,7 @@ p {
   .bar {
     /* width: 84vw; */
     display: grid;
-    grid-template-columns: max-content 1fr ;
+    grid-template-columns:  repeat(3, max-content);
     grid-template-rows: 1fr;
     grid-gap: 7px;
 
@@ -580,3 +615,5 @@ p {
     margin:0 auto;
   }
 }
+
+

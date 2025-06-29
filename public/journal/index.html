@@ -9,11 +9,10 @@
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-   
+    <script type="module" src="/main.js"></script>
     
   </head>
-  <body>
-
+  <body data-barba="wrapper">
     
 <div class="title">
     <a href="/">DEVESH DANAI</a>
@@ -27,14 +26,16 @@
   </svg></a>
   <!-- <a href="/work/" class="samebtn"><span>WORK</span></a> -->
   <a href="/info/"class="samebtn">INFO</a>
-  <!-- <a href="/journal/"class="samebtn">JOURNAL</a> -->
+  <a href="/journal/"class="samebtn">JOURNAL</a>
   
   </div>
   </div>
 
+    <main data-barba="container" data-barba-namespace="journal">
     
     
-
+    heloo
+  </main>
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -46,5 +47,37 @@
         });
       }
     </script>
+  <!-- <script type="module">
+    import barba from 'https://cdn.jsdelivr.net/npm/@barba/core/+esm';
+  
+    barba.init({
+      transitions: [
+        {
+          name: 'fade',
+          async leave({ current }) {
+            current.container.classList.add('fade-leave');
+            await new Promise(resolve => {
+              requestAnimationFrame(() => {
+                current.container.classList.add('fade-leave-active');
+                setTimeout(resolve, 300); // Match transition time exactly
+              });
+            });
+          },
+          enter({ next }) {
+            next.container.classList.add('fade-enter');
+            requestAnimationFrame(() => {
+              next.container.classList.add('fade-enter-active');
+            });
+          },
+          afterEnter({ next }) {
+            next.container.classList.remove('fade-enter', 'fade-enter-active');
+          },
+          afterLeave({ current }) {
+            current.container.classList.remove('fade-leave', 'fade-leave-active');
+          }
+        }
+      ]
+    });
+  </script> -->
   </body>
 </html>
