@@ -144,7 +144,7 @@ p {
   .card {
     height: 60vh;
     width: 60vw;
-      border:1px red solid;
+      /* border:1px red solid; */
       padding: 0;
   }
 
