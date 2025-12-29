@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/google-fonts.css">
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    
+  </head>
+  <body data-barba="wrapper">
+    
+<div class="title">
+    <a href="/">DEVESH DANAI</a>
+    <a href="/">Textile/Graphic designer and passionate front-end developer.</a>
+  </div>
+  <div class="barcover">
+  <div class="bar">
+    <a href="/" class="homebtn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+  <path d="M15.9908 21.4727V17.8555H18.8845V21.4727C18.8845 21.8705 19.21 22.1961 19.6079 22.1961H21.7781C22.176 22.1961 22.5016 21.8705 22.5016 21.4727V16.4087H23.7314C24.0642 16.4087 24.2233 15.9964 23.9701 15.7793L17.9223 10.332C17.6474 10.086 17.2278 10.086 16.9529 10.332L10.9051 15.7793C10.6592 15.9964 10.8111 16.4087 11.1438 16.4087H12.3737V21.4727C12.3737 21.8705 12.6992 22.1961 13.0971 22.1961H15.2674C15.6652 22.1961 15.9908 21.8705 15.9908 21.4727Z" />
+  </svg></a>
+  <!-- <a href="/work/" class="samebtn"><span>WORK</span></a> -->
+  <a href="/info/"class="samebtn">INFO</a>
+  <a href="/journal/"class="samebtn">JOURNAL</a>
+  
+  </div>
+  </div>
+
+    <main data-barba="container" data-barba-namespace="">
+    
+    
+    
+      
+<div class="scroller"><a href="/work/aakade/">
+  <div class="card">
+    <img src="https://res.cloudinary.com/dyag5tn5v/image/upload/c_scale,w_1558/v1706421904/new%20portfolio/aankade/photo1.webp" alt="" />
+    <div class="card-info">
+      <h1>Ankade</h1>
+      <p>Craft based design and development of textiles and apparels.</p>
+    </div>
+  </div>
+</a>
+<a href="/work/Kanji/">
+  <div class="card">
+    <img src="https://res.cloudinary.com/dyag5tn5v/image/upload/f_auto,q_auto/v1/new%20jc%20website%20assets/Screenshot_2024-01-20_at_2.53.43_PM" alt="" />
+    <div class="card-info">
+      <h1>Kanji</h1>
+      <p>Ajrakh Expolration</p>
+    </div>
+  </div>
+</a>
+</div>   
+    
+      <script >
+        $(document).ready(function () {
+      $("html, body, *").mousewheel(function (e, delta) {
+        this.scrollLeft -= delta;
+        e.preventDefault();
+      });
+    });
+    
+    </script>
+   
+
+  </main>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  <!-- <script type="module">
+    import barba from 'https://cdn.jsdelivr.net/npm/@barba/core/+esm';
+  
+    barba.init({
+      transitions: [
+        {
+          name: 'fade',
+          async leave({ current }) {
+            current.container.classList.add('fade-leave');
+            await new Promise(resolve => {
+              requestAnimationFrame(() => {
+                current.container.classList.add('fade-leave-active');
+                setTimeout(resolve, 300); // Match transition time exactly
+              });
+            });
+          },
+          enter({ next }) {
+            next.container.classList.add('fade-enter');
+            requestAnimationFrame(() => {
+              next.container.classList.add('fade-enter-active');
+            });
+          },
+          afterEnter({ next }) {
+            next.container.classList.remove('fade-enter', 'fade-enter-active');
+          },
+          afterLeave({ current }) {
+            current.container.classList.remove('fade-leave', 'fade-leave-active');
+          }
+        }
+      ]
+    });
+  </script> -->
+  </body>
+</html>

@@ -1,0 +1,619 @@
+body {
+  margin: 0;
+}
+/* Initial state for new content */
+[data-barba="container"] {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+
+@media only screen and (min-width : 430px) {
+
+  .barcover {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .bar {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: 1fr;
+    grid-gap: 7px;
+
+    padding: 8px;
+    background-color: #d9d9d9;
+    border-radius: 19px;
+  }
+
+  .samebtn {
+    display: flex;
+    align-items: center;
+    height: auto;
+    background: #ececec;
+    padding: 0 15px;
+    border-radius: 12px;
+    -moz-box-shadow: 0 0 0.6px #737373;
+    -webkit-box-shadow: 0 0 0.6px #737373;
+    box-shadow: 0 0 0.6px #737373;
+  }
+
+  .samebtn {
+    color: #737373;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .homebtn {
+    display: flex;
+    background: #ececec;
+    border-radius: 12px;
+    -moz-box-shadow: 0 0 0.6px #737373;
+    -webkit-box-shadow: 0 0 0.6px #737373;
+    box-shadow: 0 0 0.6px #737373;
+  }
+
+  .bar a:link {
+    color: black;
+  }
+
+  .bar a:hover {
+    color: #794330;
+    background-color: white;
+    text-shadow: 0.15px 0px 0.1px, -0.15px 0px 0.1px;
+  }
+
+  .homebtn svg {
+    fill: #737373;
+  }
+
+  .homebtn svg:hover {
+    fill: #794330;
+  }
+
+  .title {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+
+  .title a:first-child {
+    text-decoration: none;
+    color: #000;
+    font-family: "Rubik Mono One";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 15px;
+  }
+
+  .title a:last-child {
+    color: #000;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+
+  .card {
+    height: 60vh;
+    width: 60vw;
+      border:1px red solid;
+      padding: 0;
+  }
+
+  .card img {
+    height: 60vh;
+    width: 60vw;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .scroller {
+    height: 60svh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    gap: 15svw;
+    padding: 20svh 20svw;
+  }
+
+  .card-info {
+    height: 15vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -15vh;
+
+    text-align: center;
+    background-color: #ffffffdc;
+    transition: all 0.3s ease;
+    opacity: 0;
+    border-radius: 0 0 24px 24px;
+    padding: 0;
+  }
+
+  .card:hover>.card-info {
+    opacity: 1;
+  }
+
+  .card-info h1 {
+    color: #794330;
+
+    font-family: "Rubik Mono One";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+
+  }
+
+  .card-info p {
+    color: #794330;
+
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+
+  a {
+    text-decoration: none;
+  }
+  .project-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    /* border:1px red solid; */
+  }
+
+  .maincontainer {
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 150px 0;
+            width:80vw;
+  }
+
+
+  main {
+    display: flex;
+    flex-direction: column;
+    /* width: 99.8vw; */
+
+      /* border:1px red solid; */
+  }
+
+  main img {
+    width: 80vw;
+    height: auto;
+    aspect-ratio: auto;
+    /* padding-top:20px; */
+  }
+
+  .fourgrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .fourgrid .img {
+    width: 50%;
+    height: 50%;
+    aspect-ratio: auto;
+  }
+
+  main h1 {
+    color: #794330;
+    font-family: "Rubik Mono One";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+
+  }
+
+  main h2 {
+    color: #794330;
+
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+
+
+  }
+
+  main p {
+    color: black;
+    width: 50vw;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+  }
+
+  main div {
+    color: black;
+
+    font-family: Mulish;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 20px;
+
+  }
+  
+.about-info-box{
+  height:100vh;
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+
+}
+
+.about-info{
+  width:90vw;
+  height:max-content;
+  display:grid;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+ 
+  margin:0 auto;
+}
+
+}
+
+@media only screen and (max-width : 430px) {
+  
+  .barcover {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 25px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .bar {
+    /* width: 84vw; */
+    display: grid;
+    grid-template-columns:  repeat(3, max-content);
+    grid-template-rows: 1fr;
+    grid-gap: 7px;
+
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    background-color: #d9d9d9;
+    /* background: rgba(217, 217, 217, 0.02);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px); */
+    border-radius: 19px;
+  }
+
+  .samebtn {
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background: #ececec;
+    border-radius: 12px;
+    -moz-box-shadow: 0 0 0.6px #737373;
+    -webkit-box-shadow: 0 0 0.6px #737373;
+    box-shadow: 0 0 0.6px #737373;
+    padding:0 10px;
+  }
+
+  .samebtn {
+    color: #737373;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .homebtn {
+    display: flex;
+    background: #ececec;
+    border-radius: 12px;
+    -moz-box-shadow: 0 0 0.6px #737373;
+    -webkit-box-shadow: 0 0 0.6px #737373;
+    box-shadow: 0 0 0.6px #737373;
+  }
+
+  .bar a:link {
+    color: black;
+  }
+
+  .bar a:hover {
+    color: #794330;
+    background-color: white;
+    text-shadow: 0.15px 0px 0.1px, -0.15px 0px 0.1px;
+  }
+
+  .homebtn svg {
+    fill: #737373;
+  }
+
+  .homebtn svg:hover {
+    fill: #794330;
+  }
+
+
+  .title {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+
+  .title a:first-child {
+    text-decoration: none;
+    color: #000;
+    font-family: "Rubik Mono One";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+  }
+
+  .title a:last-child {
+    color: #000;
+    font-family: Mulish;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+
+  .card {
+    height: 60vh;
+    width: 60vw;
+    /*   border:1px red solid; */
+  }
+
+  .card img {
+    height: 60vh;
+    width: 75vw;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .scroller {
+    height: 100svh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    gap: 8svw;
+    padding: 0 12svw;
+    align-items: center;
+  }
+
+  .card-info {
+    height: 10vh;
+    width: 64.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: -13.4vh;
+
+    text-align: center;
+    background-color: #ffffffdc;
+    transition: all 0.3s ease;
+    opacity: 1;
+    border-radius: 0 0 23px 23px;
+    padding: 10px 20px;
+
+  }
+
+  .card-info h1 {
+    color: #794330;
+
+    font-family: "Rubik Mono One";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+
+  }
+
+  .card-info p {
+    color: #794330;
+
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+
+
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 100px 10px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /*   border:1px red solid; */
+  }
+  main img{
+    width:95vw;
+    height:100%;
+    padding-top: 7px;
+  }
+
+  .fourgrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .fourgrid .img {
+    width: 50%;
+  }
+
+
+  a {
+    text-decoration: none;
+  }
+
+  main h1 {
+    color: #794330;
+    font-family: "Rubik Mono One";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+
+  }
+
+  main h2 {
+    color: #794330;
+
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+    margin-bottom: 0;
+
+  }
+
+  main p {
+    color: black;
+    width: 100%;
+    font-family: Mulish;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 5px;
+  }
+
+  main div {
+    color: black;
+
+    font-family: Mulish;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .about-info-box{
+    height:90vh;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  
+  }
+  
+  .about-info{
+    width:90vw;
+    height:max-content;
+    display:grid;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   
+    margin:0 auto;
+  }
+}
+
+

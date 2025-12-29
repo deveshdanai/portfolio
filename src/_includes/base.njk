@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/google-fonts.css">
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    
+  </head>
+  <body data-barba="wrapper">
+    {% include 'header.njk' %}
+    <main data-barba="container" data-barba-namespace="{{ page.fileSlug }}">
+    
+    
+    {{ content | safe }}
+  </main>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  <!-- <script type="module">
+    import barba from 'https://cdn.jsdelivr.net/npm/@barba/core/+esm';
+  
+    barba.init({
+      transitions: [
+        {
+          name: 'fade',
+          async leave({ current }) {
+            current.container.classList.add('fade-leave');
+            await new Promise(resolve => {
+              requestAnimationFrame(() => {
+                current.container.classList.add('fade-leave-active');
+                setTimeout(resolve, 300); // Match transition time exactly
+              });
+            });
+          },
+          enter({ next }) {
+            next.container.classList.add('fade-enter');
+            requestAnimationFrame(() => {
+              next.container.classList.add('fade-enter-active');
+            });
+          },
+          afterEnter({ next }) {
+            next.container.classList.remove('fade-enter', 'fade-enter-active');
+          },
+          afterLeave({ current }) {
+            current.container.classList.remove('fade-leave', 'fade-leave-active');
+          }
+        }
+      ]
+    });
+  </script> -->
+  </body>
+</html>
