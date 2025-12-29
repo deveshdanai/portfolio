@@ -1,0 +1,13 @@
+# Node dependencies
+node_modules/
+
+# Eleventy output directory
+public/
+_site/
+
+# Local environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db

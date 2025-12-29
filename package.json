@@ -4,9 +4,11 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start": "eleventy --serve --config=.eleventy.mjs",
-    "build": "eleventy --config=.eleventy.mjs"
-  },
+  "start": "eleventy --serve",
+  "build": "eleventy"
+},
+
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
